@@ -1,54 +1,18 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.scss';
-import NxWelcome from './nx-welcome';
-import BookingMain from './components/booking/bookingMain';
-import { Route, Routes, Link } from 'react-router-dom';
+// import NxWelcome from './nx-welcome';
+import BookingMain from './components/booking/bookingMain/bookingMain';
+import DateTime from './components/booking/dateTime/dateTime';
+import { Route, Routes, Link, RouteProps } from 'react-router-dom';
+import BookingHeader from './components/booking/bookingHeader/bookingHeader';
 
 export function App() {
   return (
     <>
-      {/* <NxWelcome title="frontend" />
-      <div /> */}
-
-      {/* START: routes */}
-      {/* These routes and navigation have been generated for you */}
-      {/* Feel free to move and update them to fit your needs */}
-      {/* <br />
-      <hr />
-      <br /> */}
-      <div role="navigation">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/page-2">Page 2</Link>
-          </li>
-          <li>
-            <Link to="/book/1">Booking Site</Link>
-          </li>
-        </ul>
-      </div>
+      <BookingHeader />
       <Routes>
-        <Route path="/book/:id" element={<BookingMain />} />
-        <Route
-          path="/"
-          element={
-            <div>
-              This is the generated root route.{' '}
-              <Link to="/page-2">Click here for page 2.</Link>
-            </div>
-          }
-        />
-        <Route
-          path="/page-2"
-          element={
-            <div>
-              <Link to="/">Click here to go back to root page.</Link>
-              <Link to="/book/1">Click here to go to the booking site</Link>
-            </div>
-          }
-        />
+        <Route path="/book" element={<BookingMain />} />
+        <Route path="/book/:id" element={<DateTime />} />
       </Routes>
       {/* END: routes */}
     </>
