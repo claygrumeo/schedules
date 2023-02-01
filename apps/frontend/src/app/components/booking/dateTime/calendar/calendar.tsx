@@ -24,11 +24,13 @@ export default function Calendar({
     const newCalendarDays = Array.from({ length: month.daysInMonth }, (_, i) =>
       month.startOf('month').plus({ days: i })
     );
-    // Generate
+
+    // Generate number of leading/trailing days
     const numLeadingDays =
       month.startOf('month').weekday === 7 ? 0 : month.startOf('month').weekday;
     const numTrailingDays =
       month.endOf('month').weekday === 7 ? 6 : 6 - month.endOf('month').weekday;
+    // Add leading/trailing days
     if (numLeadingDays > 0) {
       const previousMonthLastDay = month.minus({ months: 1 }).endOf('month');
       for (let i = 0; i < numLeadingDays; i++) {
@@ -41,6 +43,7 @@ export default function Calendar({
         newCalendarDays.push(nextMonthFirstDay.plus({ days: i }));
       }
     }
+
     setCalendarDays(newCalendarDays);
   }, [month]);
 
@@ -55,7 +58,9 @@ export default function Calendar({
         {calendarDays.map((day, i) => {
           return (
             <button
-              className={`calendarDay ${selectedDate === day.toFormat('yyyy-MM-dd') ? 'selected' : ""}`}
+              className={`calendarDay ${
+                selectedDate === day.toFormat('yyyy-MM-dd') ? 'selected' : ''
+              }`}
               disabled={month.month !== day.month}
               onClick={() => selectDate(day.toFormat('yyyy-MM-dd'))}
               key={i}

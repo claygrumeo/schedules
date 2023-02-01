@@ -1,10 +1,10 @@
-import React from "react";
-import './bookingHeader.scss'
+import React from 'react';
+import './bookingHeader.scss';
 
 export default function BookingHeader() {
-  return(
+  return (
     <div className="bookingHeader">
       <h1 className="bookingHeaderTitle">Schedules</h1>
     </div>
-  )
+  );
 }

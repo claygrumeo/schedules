@@ -30,7 +30,9 @@ export default function TimeSelection() {
   return (
     <div className="dateTimeWrapper">
       <BookableSummary bookable={bookable} />
-      <Link className="backToAppointments" to={'/book'}>Back to Appointments</Link>
+      <Link className="backToAppointments" to={'/book'}>
+        Back to Appointments
+      </Link>
       {/* {`Selected Month: ${currentMonth.toFormat('MMMM yyyy')}`}
       <hr />
       {`Selected Date: ${selectedDate}`} */}
