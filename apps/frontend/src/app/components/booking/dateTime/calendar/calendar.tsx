@@ -65,7 +65,7 @@ export default function Calendar({
               onClick={() => selectDate(day.toFormat('yyyy-MM-dd'))}
               key={i}
             >
-              {day.toFormat('d')}
+              {day.day}
             </button>
           );
         })}
