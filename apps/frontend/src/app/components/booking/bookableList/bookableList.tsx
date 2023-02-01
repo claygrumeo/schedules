@@ -17,24 +17,28 @@ export default function BookableList() {
       name: '30m Appointment with Bruce',
       description: 'Book 30m with the head of Wayne Enterprises.',
       imgSrc: getRandomImage(),
+      duration: 30
     },
     {
       id: "2",
       name: '60m Appointment with Bruce',
       description: 'Book an hour with the head of Wayne Enterprises.',
       imgSrc: getRandomImage(),
+      duration: 60
     },
     {
       id: "3",
       name: 'Tour of Wayne Manor',
       description: 'Accompany Alfred on a tour of Wayne Manor.',
       imgSrc: getRandomImage(),
+      duration: 120
     },
     {
       id: "4",
       name: 'Wine Tasting in the Garden',
       description: 'Wine tasting in the Manor Gardens.',
       imgSrc: getRandomImage(),
+      duration: 180
     }
   ];
   

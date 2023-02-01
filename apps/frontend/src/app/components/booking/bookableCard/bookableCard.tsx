@@ -6,8 +6,12 @@ import { Bookable } from '@frontend/types';
 export default function BookableCard(bookable: Bookable) {
   return (
     <div className="bookableCard">
-      <Link to={`/book/${bookable.id}`}>
-        <img className="bookableImage" src={bookable.imgSrc} alt="bookableImage" />
+      <Link to={`/book/${bookable.id}`} state={{ bookable: bookable }}>
+        <img
+          className="bookableImage"
+          src={bookable.imgSrc}
+          alt="bookableImage"
+        />
         <h3 className="bookableTitle">{bookable.name}</h3>
         <p className="bookableDescription">{bookable.description}</p>
       </Link>

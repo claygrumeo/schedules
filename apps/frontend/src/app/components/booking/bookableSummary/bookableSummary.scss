@@ -1,0 +1,20 @@
+.bookableSummaryWrapper {
+  width: 600px;
+  height: 120px;
+  background: rgb(232, 232, 232);
+  display: flex;
+  box-shadow: 5px 5px 5px rgb(187, 187, 187);
+  margin-top: 20px;
+  .bookableImage {
+    width: 150px;
+    height: 120px;
+    object-fit: cover;
+  }
+  .bookableSummaryInfo {
+    padding: 10px;
+    max-width: 350px;
+  }
+  .bookableSummaryDescription {
+    padding-top: 10px;
+  }
+}

@@ -1,4 +1,13 @@
 .bookingHeader {
   background: #5B8FB9;
   height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.bookingHeaderTitle {
+  color: #B6EADA;
+  font-family: Trebuchet MS, sans-serif;
+  margin: 20px;
+  font-size: 54px;
 }

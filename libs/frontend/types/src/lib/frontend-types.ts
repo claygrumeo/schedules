@@ -6,5 +6,6 @@ export interface Bookable {
   id: string,
   name: string,
   description: string,
-  imgSrc: string
+  imgSrc: string,
+  duration: number
 }
